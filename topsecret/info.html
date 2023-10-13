@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="http://bitwiseshiftleft.github.io/sjcl/sjcl.js" integrity="sha384-zJXJqc5ftX51ojskUi8aWFg0yrz9P61p6Wyg8n0cyFYsgWiAYtxnVWzh8d8BLcw0" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="textscramble.js"></script>
+</head>
+<body>
+	<div class="infoContainer">
+		<p>Two agents have retrieved this safe from Garmadon’s volcano lair. We need you to crack the code and find out what’s inside. X-ray analysis has shown that the safe has a three-number lock. This is what we know about Garmadon and his plan:</p>
+		<p>First, our spies have discovered that the first number uses three of Garmadon’s favorite brick, the unusual 3✕2. But we also know that he likes to <i>add one thing</i> to throw you off.</p>
+		<p>Second, signals intelligence have intercepted some of Garmadon’s communications. They have learned that he plans to turn half the Ninjas against the others to distract them from his evil plan. If he succeeds, you need to be prepared to stop <i>one</i> of the groups. We need all the Ninjas to be fighting together to defeat Garmadon!</p>
+		<p>Third, Garmadon is also being monitored via spy satellite. We know he is preparing to attack Ninjago again with many mechs. However, if the Ninjas split the mechs evenly, they will only have to take on five each, leaving Garmadon and his top two Generals for Lloyd.</p>
+	</div>
+	<form method="post" autocomplete="off" action="javascript:void(0);" onsubmit="validateForm()">
+		<div class="centered">
+			<div class="inputs">
+				<input type="text" name="q1" id="q1" class="numberOnly"><input type="text" name="q2" id="q2" class="numberOnly"><input type="text" name="q3" id="q3" class="numberOnly">
+			</div><br>
+			<div class="submit">
+				<input type="submit" name="analyze" id="submit" value="Analyze Combination">
+			</div>
+		</div>
+	</form>
+	<div class="success"></div>
+	<div class="infoContainer" id="hidden">
+	    <p>Turn the dial two full turns clockwise.</p>
+	    <p>Continue turning clockwise to the first number.</p>
+	    <p>Turn the dial one full turn counterclockwise.</p>
+	    <p>Continue turning counterclockwise to the second number.</p>
+	    <p>Turn clockwise stopping as soon as you reach the third number.</p>
+	    <p>Unlock the safe.</p>
+	    <p>To reset, turn the dial two full turns clockwise.</p>
+	</div>
+	<script type="text/javascript" src="info.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+	<script src="http://bitwiseshiftleft.github.io/sjcl/sjcl.js" integrity="sha384-zJXJqc5ftX51ojskUi8aWFg0yrz9P61p6Wyg8n0cyFYsgWiAYtxnVWzh8d8BLcw0" crossorigin="anonymous"></script>
+	<script src="matrix.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="setupPage()">
+	<canvas></canvas>
+<script>
+var count = 0;
+var failureMessages = ["Nope, try again!",
+"Nuh-unh",
+"Is that the best you've got??",
+"Man, it really will be sweet when you figure this out.",
+"You'll get it eventually.",
+"Won't you?",
+"C'mon, slowpoke. Still not right!"];
+var hashedPass = '3b144795a77dfc62ed299dd7d37e6f87abd70d7fc44fc916ee2c950a2043e9f7';
+function trypassword() {
+	var guess = document.password.pswd.value.toLowerCase();
+	var out = sjcl.hash.sha256.hash(guess);
+	var hash = sjcl.codec.hex.fromBits(out)
+    if (hash !== hashedPass){
+    	failureMessage = failureMessages[count % failureMessages.length];
+        window.alert(failureMessage);
+    } else {
+        document.location.href=guess+'.html';
+    }
+    count++;
+}
+</script>
+<div id="password">
+	<form action="javascript:trypassword();" method="post" name="password"">
+		<label for="pswd">What's the magic word?</label>
+		<input type="text" name="pswd" id="focus">
+		<input type="submit" name="submit">
+	</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+html, body {
+  height:100%;
+  width:100%;
+  margin:0;
+  padding:0;
+  background-color: black;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* main */
+
+.container {
+  height: 100%;
+  width: 100%;
+  justify-content: left;
+  align-items: left;
+}
+
+.text, .reveal {
+  margin-top: 5%;
+  margin-left: 30%;
+  width: 100%;
+  font-weight: 400;
+  font-size: 28px;
+  color: #45F203;
+}
+
+.text div {
+  min-height: 28px;
+}
+
+.dud {
+  color: #C9C9C9;
+}
+
+.reveal {
+  display: none;
+}
+
+.reveal a, .reveal a:visited {
+  color: #45F203;
+}
+
+.reveal a:hover {
+  text-decoration: none;
+}
+
+/* info */
+
+.infoContainer {
+  width: 100%;
+  margin-left: 10%;
+  justify-content: left;
+  align-items: left;
+}
+
+.infoContainer p {
+  margin-top: 1rem;
+  width: 80%;
+  font-weight: 400;
+  font-size: 20px;
+  color: #45F203;
+}
+
+.numberOnly, #submit {
+  margin-right: 2rem;
+  background-color: black;
+  font-size: 28px;
+  padding: .3rem;
+  color: #fff;
+  border-color: #45F203;
+  border-style: solid;
+}
+
+.numberOnly {
+  margin-top: 1rem;
+  caret-color: #45F203;
+  width: 2.2rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+#submit {
+  /*margin-top: 2rem;*/
+  width: 20rem;
+  border-radius: 12px;
+  border-color: #45F203;
+}
+
+#submit:active {
+  border-color: #fff;
+}
+
+.centered {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.success {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+#hidden {
+  display: none;
+  margin-bottom: 3rem;
+}
